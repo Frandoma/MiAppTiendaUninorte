@@ -1,3 +1,4 @@
+
 class TiendaProductos:
     def __init__(self, nombre, precio, descripcion):
         self.nombre = nombre
@@ -45,11 +46,13 @@ def main():
 
     print("\nResumen del pedido:")
     for producto, cantidad in carrito.items():
+        print("=========================================================")
         print(f"{producto.nombre} - Cantidad: {cantidad} - Subtotal: ${producto.precio * cantidad}")
-    
+        print("=========================================================")
     total = calcular_total(carrito)
+    print("****************************************")
     print(f"Total a pagar: ${total}")
-
+    print("****************************************")
     aprobar_pedido = input("¿Desea aprobar el pedido? (si/no): ").lower()
     if aprobar_pedido == "si":
         print("\nCompra aprobada.")
